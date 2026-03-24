@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚙️ Управление учениками — IT-Курс</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); }
+
+.admin-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.admin-header {
+  text-align: center;
+  padding: 40px 20px 30px;
+  color: white;
+}
+.admin-header h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  margin-bottom: 8px;
+}
+.admin-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 0 0 24px;
+  flex-wrap: wrap;
+}
+
+.student-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.student-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.student-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #1e1b4b;
+}
+
+.student-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.student-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.btn-sm:hover { transform: translateY(-2px); }
+
+.btn-enter { background: #10b981; color: white; }
+.btn-delete { background: #ef4444; color: white; }
+
+.lessons-progress {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+  .lessons-progress { grid-template-columns: repeat(6, 1fr); }
+}
+
+.lp-item {
+  border-radius: 8px;
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.lp-done {
+  background: #d1fae5;
+  color: #065f46;
+  border: 2px solid #10b981;
+}
+
+.lp-pending {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border: 2px solid #e5e7eb;
+}
+
+.empty-state {
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.empty-state .icon { font-size: 3rem; display: block; margin-bottom: 16px; }
+.empty-state h2 { font-size: 1.4rem; font-weight: 900; color: #1e1b4b; margin-bottom: 8px; }
+.empty-state p { color: #6b7280; font-weight: 600; }
+
+.confirm-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.confirm-box {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.3);
+}
+
+.confirm-box h3 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #1e1b4b;
+  margin-bottom: 12px;
+}
+
+.confirm-box p {
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+
+<div class="admin-header">
+  <div style="font-size:3rem; margin-bottom:12px">⚙️</div>
+  <h1>Управление учениками</h1>
+  <p>История запуска и прохождения курса</p>
+</div>
+
+<div class="admin-nav">
+  <a href="login.html" class="btn btn-home">🎓 Войти как ученик</a>
+  <a href="index.html" class="btn btn-next">🏠 К курсу</a>
+</div>
+
+<div class="admin-container" id="admin-content">
+  <!-- populated by JS -->
+</div>
+
+<div id="confirm-modal" style="display:none"></div>
+
+<script>
+const STORAGE_KEY = "pro_course_students";
+const CURRENT_KEY = "pro_course_current";
+
+const LESSON_NAMES = {
+  1: "Ввод/вывод", 2: "Системный блок", 3: "ОС", 4: "Рабочий стол",
+  5: "Интернет", 6: "Клавиатура", 7: "Печать", 8: "Scratch",
+  9: "Анимация", 10: "Игра Scratch", 11: "Python", 12: "Переменные",
+  13: "Арифметика", 14: "Калькулятор", 15: "IDE", 16: "AI",
+  17: "AI+игры", 18: "Финал"
+};
+
+function getAllStudents() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
+}
+function saveAllStudents(s) { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); }
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function render() {
+  const container = document.getElementById("admin-content");
+  const students = getAllStudents();
+  const logins = Object.keys(students);
+
+  if (logins.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <span class="icon">👦</span>
+        <h2>Пока нет учеников</h2>
+        <p>Перейдите на страницу входа и введите логин ученика для начала курса</p>
+        <a href="login.html" class="btn btn-next" style="margin-top:20px; display:inline-flex">🎓 Начать курс</a>
+      </div>`;
+    return;
+  }
+
+  let html = `<div style="color:white; font-weight:800; font-size:1rem; margin-bottom:16px; opacity:0.9">
+    Всего учеников: ${logins.length}
+  </div>`;
+
+  logins.forEach(login => {
+    const s = students[login];
+    const count = Object.keys(s.completedLessons).length;
+    const pct = Math.round((count / 18) * 100);
+    const current = localStorage.getItem(CURRENT_KEY);
+    const isCurrent = current === login;
+
+    let lessonsHTML = "";
+    for (let i = 1; i <= 18; i++) {
+      const done = !!s.completedLessons[i];
+      const date = done ? s.completedLessons[i] : "";
+      const cls = done ? "lp-done" : "lp-pending";
+      const icon = done ? "✅" : i;
+      const title = LESSON_NAMES[i] + (done ? ` (${date})` : "");
+      lessonsHTML += `<div class="lp-item ${cls}" title="${title}">${icon}</div>`;
+    }
+
+    html += `
+      <div class="student-card" id="card-${escapeHtml(login)}">
+        <div class="student-header">
+          <div class="student-info">
+            <div class="student-avatar">👦</div>
+            <div>
+              <div class="student-name">${escapeHtml(login)} ${isCurrent ? '<span style="background:#7c3aed; color:white; font-size:0.7rem; padding:2px 8px; border-radius:8px; margin-left:8px">ТЕКУЩИЙ</span>' : ''}</div>
+              <div class="student-meta">Начало: ${s.startDate} | Пройдено: ${count}/18 (${pct}%)</div>
+            </div>
+          </div>
+          <div class="student-actions">
+            <button class="btn-sm btn-enter" onclick="enterAsStudent('${escapeHtml(login)}')">▶️ Войти</button>
+            <button class="btn-sm btn-delete" onclick="confirmDelete('${escapeHtml(login)}')">🗑️ Удалить</button>
+          </div>
+        </div>
+        <div class="progress-bar" style="height:12px; margin-bottom:12px">
+          <div class="progress-fill" style="width:${pct}%"></div>
+        </div>
+        <div class="lessons-progress">${lessonsHTML}</div>
+      </div>`;
+  });
+
+  container.innerHTML = html;
+}
+
+function enterAsStudent(login) {
+  localStorage.setItem(CURRENT_KEY, login);
+  window.location.href = "index.html";
+}
+
+function confirmDelete(login) {
+  const modal = document.getElementById("confirm-modal");
+  modal.style.display = "block";
+  modal.innerHTML = `
+    <div class="confirm-overlay" onclick="closeConfirm(event)">
+      <div class="confirm-box" onclick="event.stopPropagation()">
+        <div style="font-size:2.5rem; margin-bottom:12px">⚠️</div>
+        <h3>Удалить ученика?</h3>
+        <p>Вы уверены, что хотите удалить всю историю ученика <strong>${escapeHtml(login)}</strong>?<br>Это действие нельзя отменить!</p>
+        <div class="confirm-actions">
+          <button class="btn-sm" style="background:#e5e7eb; color:#374151" onclick="closeConfirm()">Отмена</button>
+          <button class="btn-sm btn-delete" onclick="doDelete('${escapeHtml(login)}')">🗑️ Да, удалить</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+function closeConfirm(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById("confirm-modal").style.display = "none";
+}
+
+function doDelete(login) {
+  const students = getAllStudents();
+  delete students[login];
+  saveAllStudents(students);
+  if (localStorage.getItem(CURRENT_KEY) === login) {
+    localStorage.removeItem(CURRENT_KEY);
+  }
+  closeConfirm();
+  render();
+}
+
+render();
+</script>
+
+</body>
+</html>
