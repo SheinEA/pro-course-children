@@ -118,6 +118,16 @@ body {
       pattern="[a-zA-Zа-яА-ЯёЁ0-9_\-]+"
       title="Только буквы, цифры, дефис и подчёркивание"
     >
+    <div id="fio-field" style="display:none; margin-top:12px">
+      <input
+        type="text"
+        id="student-fio"
+        class="login-input"
+        placeholder="ФИО ученика (Фамилия Имя Отчество)"
+        autocomplete="off"
+        maxlength="100"
+      >
+    </div>
     <div class="login-error" id="login-error"></div>
     <button type="submit" class="login-btn" id="login-btn">🎓 Начать курс</button>
   </form>
@@ -161,16 +171,19 @@ loginInput.addEventListener("input", function() {
   }
 
   const students = getAllStudents();
+  const fioField = document.getElementById("fio-field");
   if (students[val]) {
     const s = students[val];
     const count = Object.keys(s.completedLessons).length;
+    const fioText = s.fio ? `<br>ФИО: ${s.fio}` : "";
     statusDiv.style.display = "block";
     statusDiv.innerHTML = `
       <div style="background:#f0fdf4; border:2px solid #10b981; border-radius:12px; padding:12px; font-size:0.9rem">
         <div style="font-weight:900; color:#065f46">✅ Ученик найден!</div>
-        <div style="color:#374151; font-weight:600; margin-top:4px">Начало: ${s.startDate} | Пройдено: ${count}/18</div>
+        <div style="color:#374151; font-weight:600; margin-top:4px">Начало: ${s.startDate} | Пройдено: ${count}/18${fioText}</div>
       </div>`;
     loginBtn.textContent = "▶️ Продолжить курс";
+    fioField.style.display = "none";
   } else {
     statusDiv.style.display = "block";
     statusDiv.innerHTML = `
@@ -179,6 +192,7 @@ loginInput.addEventListener("input", function() {
         <div style="color:#374151; font-weight:600; margin-top:4px">Будет создан новый курс</div>
       </div>`;
     loginBtn.textContent = "🎓 Начать новый курс";
+    fioField.style.display = "block";
   }
 });
 
@@ -201,8 +215,17 @@ function handleLogin(e) {
   // Create student if new
   const students = getAllStudents();
   if (!students[val]) {
+    const fioInput = document.getElementById("student-fio");
+    const fio = fioInput ? fioInput.value.trim() : "";
+    if (!fio) {
+      errorDiv.textContent = "Введите ФИО ученика";
+      errorDiv.style.display = "block";
+      fioInput && fioInput.focus();
+      return;
+    }
     students[val] = {
       login: val,
+      fio: fio,
       startDate: new Date().toISOString().slice(0, 10),
       completedLessons: {}
     };

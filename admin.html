@@ -274,8 +274,8 @@ function render() {
           <div class="student-info">
             <div class="student-avatar">👦</div>
             <div>
-              <div class="student-name">${escapeHtml(login)} ${isCurrent ? '<span style="background:#7c3aed; color:white; font-size:0.7rem; padding:2px 8px; border-radius:8px; margin-left:8px">ТЕКУЩИЙ</span>' : ''}</div>
-              <div class="student-meta">Начало: ${s.startDate} | Пройдено: ${count}/18 (${pct}%)</div>
+              <div class="student-name">${s.fio ? escapeHtml(s.fio) : escapeHtml(login)} ${isCurrent ? '<span style="background:#7c3aed; color:white; font-size:0.7rem; padding:2px 8px; border-radius:8px; margin-left:8px">ТЕКУЩИЙ</span>' : ''}</div>
+              <div class="student-meta">${s.fio ? 'Логин: ' + escapeHtml(login) + ' | ' : ''}Начало: ${s.startDate} | Пройдено: ${count}/18 (${pct}%)</div>
             </div>
           </div>
           <div class="student-actions">

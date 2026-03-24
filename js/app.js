@@ -300,13 +300,20 @@ function updateStudentBadge(login, isLesson) {
 
   const count = getCompletedCount(login);
 
+  const displayName = student.fio ? escapeHtml(student.fio) : escapeHtml(login);
+  const loginLabel = student.fio ? `${escapeHtml(login)}` : "";
+  const nameLine = student.fio
+    ? `<div style="color:white; font-weight:900; font-size:1rem">${displayName}</div>
+       <div style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:700">\u041B\u043E\u0433\u0438\u043D: ${loginLabel} | \u041D\u0430\u0447\u0430\u043B\u043E: ${student.startDate} | \u041F\u0440\u043E\u0439\u0434\u0435\u043D\u043E: ${count}/18</div>`
+    : `<div style="color:white; font-weight:900; font-size:1rem">\u0423\u0447\u0435\u043D\u0438\u043A: ${escapeHtml(login)}</div>
+       <div style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:700">\u041D\u0430\u0447\u0430\u043B\u043E: ${student.startDate} | \u041F\u0440\u043E\u0439\u0434\u0435\u043D\u043E: ${count}/18</div>`;
+
   const badgeHTML = `
     <div id="student-bar" style="background:rgba(255,255,255,0.15); backdrop-filter:blur(10px); border-bottom:2px solid rgba(255,255,255,0.3); padding:10px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px">
       <div style="display:flex; align-items:center; gap:12px">
         <span style="font-size:1.5rem">\uD83D\uDC66</span>
         <div>
-          <div style="color:white; font-weight:900; font-size:1rem">\u0423\u0447\u0435\u043D\u0438\u043A: ${escapeHtml(login)}</div>
-          <div style="color:rgba(255,255,255,0.7); font-size:0.8rem; font-weight:700">\u041D\u0430\u0447\u0430\u043B\u043E: ${student.startDate} | \u041F\u0440\u043E\u0439\u0434\u0435\u043D\u043E: ${count}/18</div>
+          ${nameLine}
         </div>
       </div>
       <div style="display:flex; gap:8px; flex-wrap:wrap">
