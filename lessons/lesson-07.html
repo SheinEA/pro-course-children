@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 7 — Учимся печатать быстро</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.typing-game {
+  background: #1e1b4b;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+}
+.typing-text {
+  font-family: 'Courier New', monospace;
+  font-size: 1.4rem;
+  color: #e2e8f0;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  line-height: 2;
+}
+.typing-text span.done { color: #34d399; }
+.typing-text span.current { color: #fbbf24; text-decoration: underline; }
+.finger-map {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  margin: 12px 0;
+}
+.fkey {
+  border-radius: 6px;
+  padding: 6px 2px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+.f1 { background: #ef4444; } /* мизинец левой */
+.f2 { background: #f97316; } /* безымянный левой */
+.f3 { background: #eab308; } /* средний левой */
+.f4 { background: #22c55e; } /* указательный левой */
+.f5 { background: #22c55e; } /* указательный левой */
+.f6 { background: #3b82f6; } /* указательный правой */
+.f7 { background: #3b82f6; } /* указательный правой */
+.f8 { background: #eab308; } /* средний правой */
+.f9 { background: #f97316; } /* безымянный правой */
+.f0 { background: #ef4444; } /* мизинец правой */
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 7 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-06.html" class="btn btn-prev">← Урок 6</a>
+  <a href="lesson-08.html" class="btn btn-next">Урок 8 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 7</div>
+    <span class="lesson-emoji">🏃</span>
+    <h1 class="lesson-title">Учимся печатать быстро!</h1>
+    <p class="lesson-subtitle">Тренируем пальцы — каждый палец знает свои клавиши!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Вспоминаем домашний ряд</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–8 мин</span>
+        <div class="timeline-text">🗺️ Карта пальцев — какой палец какую клавишу нажимает</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">8–17 мин</span>
+        <div class="timeline-text">⌨️ Практика: упражнения для пальцев</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">17–20 мин</span>
+        <div class="timeline-text">🎮 Игры для тренировки + задание</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАРТА ПАЛЬЦЕВ -->
+  <div class="card">
+    <div class="card-title">🗺️ Карта пальцев</div>
+    <p style="font-weight:700; color:#374151; margin-bottom:12px">Каждый палец отвечает за свои буквы!</p>
+
+    <div style="background:#f8fafc; border-radius:16px; padding:16px">
+      <div style="text-align:center; margin-bottom:8px; font-weight:800; color:#374151">Верхний ряд (QWERTY)</div>
+      <div class="finger-map">
+        <div class="fkey f1">Q</div>
+        <div class="fkey f2">W</div>
+        <div class="fkey f3">E</div>
+        <div class="fkey f4">R</div>
+        <div class="fkey f5">T</div>
+        <div class="fkey f6">Y</div>
+        <div class="fkey f7">U</div>
+        <div class="fkey f8">I</div>
+        <div class="fkey f9">O</div>
+        <div class="fkey f0">P</div>
+      </div>
+      <div style="text-align:center; margin:8px 0; font-weight:800; color:#374151">Домашний ряд (ASDF JKL)</div>
+      <div class="finger-map">
+        <div class="fkey f1">A</div>
+        <div class="fkey f2">S</div>
+        <div class="fkey f3">D</div>
+        <div class="fkey f4">F</div>
+        <div class="fkey f5">G</div>
+        <div class="fkey f6">H</div>
+        <div class="fkey f7">J</div>
+        <div class="fkey f8">K</div>
+        <div class="fkey f9">L</div>
+        <div class="fkey f0">;</div>
+      </div>
+      <div style="text-align:center; margin:8px 0; font-weight:800; color:#374151">Нижний ряд (ZXCV BNM)</div>
+      <div class="finger-map">
+        <div class="fkey f1">Z</div>
+        <div class="fkey f2">X</div>
+        <div class="fkey f3">C</div>
+        <div class="fkey f4">V</div>
+        <div class="fkey f5">B</div>
+        <div class="fkey f6">N</div>
+        <div class="fkey f7">M</div>
+        <div class="fkey f8">,</div>
+        <div class="fkey f9">.</div>
+        <div class="fkey f0">/</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:12px">
+      <div style="background:#fef2f2; border-radius:12px; padding:12px">
+        <div style="font-weight:900; color:#991b1b; margin-bottom:6px">✋ Левая рука</div>
+        <div style="font-size:0.9rem; font-weight:700; color:#7f1d1d">
+          🔴 Мизинец: A, Q, Z<br>
+          🟠 Безымянный: S, W, X<br>
+          🟡 Средний: D, E, C<br>
+          🟢 Указательный: F, G, R, T, V, B
+        </div>
+      </div>
+      <div style="background:#eff6ff; border-radius:12px; padding:12px">
+        <div style="font-weight:900; color:#1e40af; margin-bottom:6px">🤚 Правая рука</div>
+        <div style="font-size:0.9rem; font-weight:700; color:#1e3a8a">
+          🔵 Указательный: J, H, U, Y, N, M<br>
+          🟡 Средний: K, I, ,<br>
+          🟠 Безымянный: L, O, .<br>
+          🔴 Мизинец: ;, P, /
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- УПРАЖНЕНИЯ -->
+  <div class="card">
+    <div class="card-title">💪 Упражнения для тренировки</div>
+    <div class="block block-purple">
+      <div class="block-title">Шаг 1 — Домашний ряд</div>
+      <p>Напечатай не глядя: <strong>asdf jkl; asdf jkl;</strong><br>Повтори 5 раз!</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">Шаг 2 — Добавляем верхний ряд</div>
+      <p>Напечатай: <strong>qwer tyui qwer tyui</strong><br>Повтори 3 раза!</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">Шаг 3 — Первые слова!</div>
+      <p>Попробуй напечатать: <strong>dad sad fad lad</strong><br>(Это английские слова: папа, грустный, дурак, парень)</p>
+    </div>
+  </div>
+
+  <!-- ИГРЫ ДЛЯ ТРЕНИРОВКИ -->
+  <div class="card">
+    <div class="card-title">🎮 Игры для тренировки</div>
+    <div class="block block-yellow">
+      <div class="block-title">⌨️ Keybr.com</div>
+      <p>Бесплатный тренажёр для печати. Учит слепой печати шаг за шагом. Есть для детей!</p>
+    </div>
+    <div class="block block-pink">
+      <div class="block-title">🎯 Typing.com</div>
+      <p>Очень красивый тренажёр с уроками, играми и прогрессом. Подходит для 7 лет!</p>
+    </div>
+    <div class="block block-teal">
+      <div class="block-title">🏃 TypeRacer</div>
+      <p>Гонки на скорость печати! Печатаешь быстрее — твоя машинка едет быстрее!</p>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Раскладка клавиатуры QWERTY была придумана в <strong>1873 году</strong> для пишущих машинок! Её сделали специально так, чтобы часто используемые буквы были подальше друг от друга — иначе рычажки машинки застревали. Сейчас это не нужно, но раскладку не меняют — все уже привыкли! 🖨️</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Каждый день по <strong>5 минут</strong> практикуй печать!<br><br>
+    🎯 <strong>Задание 1</strong>: Зайди на typing.com и пройди первый урок<br>
+    📝 <strong>Задание 2</strong>: Напечатай своё имя 10 раз не глядя на клавиатуру<br>
+    🎨 <strong>Задание 3</strong>: Нарисуй «карту пальцев» — каждый палец своим цветом!<br><br>
+    Помни: медленно и точно лучше, чем быстро и с ошибками! 🐢➡️🐇</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-06.html" class="btn btn-prev">← Урок 6</a>
+  <a href="lesson-08.html" class="btn btn-next">Урок 8 →</a>
+</nav>
+
+</body>
+</html>

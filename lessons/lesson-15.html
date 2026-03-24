@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 15 — IDE — редактор кода</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 15 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-14.html" class="btn btn-prev">← Урок 14</a>
+  <a href="lesson-16.html" class="btn btn-next">Урок 16 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 15</div>
+    <span class="lesson-emoji">📝</span>
+    <h1 class="lesson-title">IDE — редактор кода</h1>
+    <p class="lesson-subtitle">Мастерская программиста — устанавливаем VS Code!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🧮 Показываем улучшенные калькуляторы</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–7 мин</span>
+        <div class="timeline-text">🔧 Что такое IDE и зачем нужна?</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">7–13 мин</span>
+        <div class="timeline-text">💻 Устанавливаем VS Code и Python</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">13–20 мин</span>
+        <div class="timeline-text">🎯 Запускаем калькулятор в VS Code!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЧТО ТАКОЕ IDE -->
+  <div class="card">
+    <div class="card-title">🔧 Что такое IDE?</div>
+    <div class="block block-purple">
+      <div class="block-title">🏗️ IDE = Мастерская программиста</div>
+      <p>IDE (Integrated Development Environment) — это специальная программа для написания кода. Как <strong>мастерская</strong> у папы — там есть все инструменты в одном месте!</p>
+    </div>
+    <div class="grid-2" style="margin-top:12px">
+      <div class="block block-blue" style="margin:0">
+        <div class="block-title">✨ Подсветка кода</div>
+        <p>Разные слова красятся в разные цвета — так легче читать!</p>
+      </div>
+      <div class="block block-green" style="margin:0">
+        <div class="block-title">🔮 Автодополнение</div>
+        <p>IDE подсказывает что написать дальше — как умная клавиатура!</p>
+      </div>
+      <div class="block block-yellow" style="margin:0">
+        <div class="block-title">🐛 Поиск ошибок</div>
+        <p>IDE показывает где ошибка — подчёркивает красным!</p>
+      </div>
+      <div class="block block-pink" style="margin:0">
+        <div class="block-title">▶️ Запуск кода</div>
+        <p>Нажал кнопку — программа запустилась прямо здесь!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VS CODE -->
+  <div class="card">
+    <div class="card-title">💙 Visual Studio Code (VS Code)</div>
+    <div class="block block-blue">
+      <div class="block-title">👑 VS Code — самый популярный редактор</div>
+      <p>VS Code сделала компания <strong>Microsoft</strong>. Его используют миллионы программистов по всему миру — включая твоего папу! Он <strong>бесплатный</strong> и очень удобный.</p>
+    </div>
+
+    <div class="grid-3" style="margin-top:12px">
+      <div class="icon-card">
+        <span class="icon">🆓</span>
+        <div class="label">Бесплатно</div>
+      </div>
+      <div class="icon-card">
+        <span class="icon">🌍</span>
+        <div class="label">На любом языке</div>
+      </div>
+      <div class="icon-card">
+        <span class="icon">🎨</span>
+        <div class="label">Красивые темы</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАК ВЫГЛЯДИТ VS CODE -->
+  <div class="card">
+    <div class="card-title">🖥️ Как выглядит VS Code</div>
+    <div style="background:#1e1e1e; border-radius:16px; overflow:hidden; font-family:monospace">
+      <div style="background:#323233; padding:8px 16px; display:flex; align-items:center; gap:8px">
+        <div style="width:12px;height:12px;border-radius:50%;background:#ef4444"></div>
+        <div style="width:12px;height:12px;border-radius:50%;background:#f59e0b"></div>
+        <div style="width:12px;height:12px;border-radius:50%;background:#22c55e"></div>
+        <span style="color:#9ca3af; font-size:0.85rem; margin-left:8px">calculator.py — Visual Studio Code</span>
+      </div>
+      <div style="display:flex">
+        <div style="width:48px; background:#252526; padding:12px 0; display:flex; flex-direction:column; align-items:center; gap:16px">
+          <div style="color:#9ca3af; font-size:1.2rem">📁</div>
+          <div style="color:#9ca3af; font-size:1.2rem">🔍</div>
+          <div style="color:#9ca3af; font-size:1.2rem">🔧</div>
+        </div>
+        <div style="flex:1; padding:16px; font-size:0.85rem; line-height:1.8">
+          <div><span style="color:#569cd6">print</span>(<span style="color:#ce9178">"=== Мой Калькулятор ==="</span>)</div>
+          <div><span style="color:#569cd6">a</span> <span style="color:#d4d4d4">=</span> <span style="color:#569cd6">int</span>(<span style="color:#569cd6">input</span>(<span style="color:#ce9178">"Число 1: "</span>))</div>
+          <div><span style="color:#569cd6">b</span> <span style="color:#d4d4d4">=</span> <span style="color:#569cd6">int</span>(<span style="color:#569cd6">input</span>(<span style="color:#ce9178">"Число 2: "</span>))</div>
+          <div><span style="color:#569cd6">print</span>(<span style="color:#569cd6">f</span><span style="color:#ce9178">"Сумма: </span><span style="color:#fbbf24">{a+b}</span><span style="color:#ce9178">"</span>)</div>
+        </div>
+      </div>
+      <div style="background:#007acc; padding:4px 16px; font-size:0.75rem; color:white; display:flex; justify-content:space-between">
+        <span>Python 3.11</span>
+        <span>Ln 4, Col 1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- УСТАНОВКА -->
+  <div class="card">
+    <div class="card-title">⚙️ Как установить</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">Шаг 1</span>
+        <div class="timeline-text">Скачай Python на <strong>python.org</strong> → нажми «Download»</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">Шаг 2</span>
+        <div class="timeline-text">При установке Python — поставь галочку ✅ «Add to PATH»!</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">Шаг 3</span>
+        <div class="timeline-text">Скачай VS Code на <strong>code.visualstudio.com</strong></div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">Шаг 4</span>
+        <div class="timeline-text">В VS Code установи расширение «Python» (иконка пазла)</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">Шаг 5</span>
+        <div class="timeline-text">Создай файл <strong>hello.py</strong> и напиши print("Привет!") → запусти!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>VS Code скачивают <strong>более 14 миллионов</strong> раз в месяц! По опросам разработчиков, это <strong>самый любимый</strong> редактор в мире уже несколько лет подряд. Твой папа тоже наверняка им пользуется! Теперь у вас будет один любимый инструмент! 👨‍💻👦</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Вместе с папой:<br><br>
+    💻 <strong>Установи</strong> Python и VS Code<br>
+    📁 <strong>Создай папку</strong> «Мои программы»<br>
+    🐍 <strong>Создай файл</strong> calculator.py<br>
+    📋 <strong>Скопируй</strong> свой калькулятор из replit<br>
+    ▶️ <strong>Запусти</strong> в VS Code и проверь что работает!<br><br>
+    Нарисуй: <strong>свой аватар-программиста</strong> за компьютером в VS Code! 🖍️👨‍💻</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-14.html" class="btn btn-prev">← Урок 14</a>
+  <a href="lesson-16.html" class="btn btn-next">Урок 16 →</a>
+</nav>
+
+</body>
+</html>

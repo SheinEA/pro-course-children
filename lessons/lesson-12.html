@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 12 — Python — числа и переменные</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 12 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-11.html" class="btn btn-prev">← Урок 11</a>
+  <a href="lesson-13.html" class="btn btn-next">Урок 13 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 12</div>
+    <span class="lesson-emoji">🔢</span>
+    <h1 class="lesson-title">Python — числа и переменные</h1>
+    <p class="lesson-subtitle">Учимся хранить информацию — как коробки для вещей!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Смотрим домашние программы print()</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–9 мин</span>
+        <div class="timeline-text">📦 Что такое переменная?</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">9–16 мин</span>
+        <div class="timeline-text">💻 Создаём переменные и выводим их</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">16–20 мин</span>
+        <div class="timeline-text">🧮 Простые операции с переменными</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПЕРЕМЕННАЯ -->
+  <div class="card">
+    <div class="card-title">📦 Что такое переменная?</div>
+    <div class="block block-purple">
+      <div class="block-title">🗃️ Переменная — как коробка с ярлычком</div>
+      <p>Представь коробку, на которой написано «яблоки». Внутри — 5 яблок. <strong>Переменная</strong> — это такая коробка! У неё есть <strong>имя</strong> (ярлычок) и <strong>значение</strong> (то что внутри).</p>
+    </div>
+    <div class="grid-2" style="margin-top:12px">
+      <div style="text-align:center; padding:16px; background:#f5f3ff; border-radius:16px">
+        <div style="font-size:2.5rem; margin-bottom:8px">📦</div>
+        <div style="background:#7c3aed; color:white; border-radius:8px; padding:4px 12px; font-weight:900; font-size:0.9rem; display:inline-block">имя = "Тимур"</div>
+      </div>
+      <div style="text-align:center; padding:16px; background:#eff6ff; border-radius:16px">
+        <div style="font-size:2.5rem; margin-bottom:8px">📦</div>
+        <div style="background:#2563eb; color:white; border-radius:8px; padding:4px 12px; font-weight:900; font-size:0.9rem; display:inline-block">возраст = 7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- КАК СОЗДАТЬ -->
+  <div class="card">
+    <div class="card-title">💻 Создаём переменные в Python</div>
+    <div class="code-block">
+<span class="code-comment"># Создаём переменные</span>
+имя = <span class="code-string">"Тимур"</span>
+возраст = <span class="code-number">7</span>
+любимый_цвет = <span class="code-string">"синий"</span>
+оценка = <span class="code-number">5</span>
+
+<span class="code-comment"># Используем переменные</span>
+<span class="code-keyword">print</span>(имя)
+<span class="code-keyword">print</span>(возраст)
+<span class="code-keyword">print</span>(любимый_цвет)
+    </div>
+    <div class="block block-yellow" style="margin-top:12px">
+      <div class="block-title">📺 Результат:</div>
+      <div class="code-block" style="margin-top:8px; background:#064e3b">
+<span class="code-output">Тимур</span>
+<span class="code-output">7</span>
+<span class="code-output">синий</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ТИПЫ ДАННЫХ -->
+  <div class="card">
+    <div class="card-title">🗂️ Виды данных в переменных</div>
+    <div class="block block-blue">
+      <div class="block-title">📝 Строка (str) — текст в кавычках</div>
+      <div class="code-block" style="margin-top:8px">имя = <span class="code-string">"Тимур"</span>  <span class="code-comment"># текст</span></div>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">🔢 Целое число (int) — без точки</div>
+      <div class="code-block" style="margin-top:8px">возраст = <span class="code-number">7</span>  <span class="code-comment"># целое число</span></div>
+    </div>
+    <div class="block block-orange">
+      <div class="block-title">📊 Дробное число (float) — с точкой</div>
+      <div class="code-block" style="margin-top:8px">рост = <span class="code-number">1.25</span>  <span class="code-comment"># число с дробью</span></div>
+    </div>
+    <div class="block block-pink">
+      <div class="block-title">✅ Правда/Ложь (bool) — True или False</div>
+      <div class="code-block" style="margin-top:8px">люблю_мороженое = <span class="code-keyword">True</span>  <span class="code-comment"># да!</span></div>
+    </div>
+  </div>
+
+  <!-- СОВМЕЩАЕМ ТЕКСТ И ПЕРЕМЕННЫЕ -->
+  <div class="card">
+    <div class="card-title">✨ Текст + переменные вместе</div>
+    <div class="code-block">
+имя = <span class="code-string">"Тимур"</span>
+возраст = <span class="code-number">7</span>
+
+<span class="code-comment"># Способ 1: через запятую</span>
+<span class="code-keyword">print</span>(<span class="code-string">"Привет, меня зовут"</span>, имя)
+<span class="code-keyword">print</span>(<span class="code-string">"Мне"</span>, возраст, <span class="code-string">"лет"</span>)
+
+<span class="code-comment"># Способ 2: f-строка (модный способ!)</span>
+<span class="code-keyword">print</span>(<span class="code-string">f"Привет! Я {имя}, мне {возраст} лет!"</span>)
+    </div>
+    <div class="block block-green" style="margin-top:12px">
+      <div class="block-title">📺 Результат:</div>
+      <div class="code-block" style="margin-top:8px; background:#064e3b">
+<span class="code-output">Привет, меня зовут Тимур</span>
+<span class="code-output">Мне 7 лет</span>
+<span class="code-output">Привет! Я Тимур, мне 7 лет!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>В компьютере все переменные хранятся в <strong>оперативной памяти (RAM)</strong> — той самой, о которой мы говорили в уроке 2! Когда программа закрывается — переменные исчезают. Поэтому важные данные сохраняют в <strong>файлы</strong>! 💾</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Напиши программу «<strong>Моя анкета</strong>»:<br><br>
+    <code style="background:#1e1b4b; color:#fbbf24; padding:4px 8px; border-radius:6px; font-size:0.85rem">имя = "..."</code><br>
+    <code style="background:#1e1b4b; color:#fbbf24; padding:4px 8px; border-radius:6px; font-size:0.85rem">возраст = ...</code><br>
+    <code style="background:#1e1b4b; color:#fbbf24; padding:4px 8px; border-radius:6px; font-size:0.85rem">любимая_игра = "..."</code><br>
+    <code style="background:#1e1b4b; color:#fbbf24; padding:4px 8px; border-radius:6px; font-size:0.85rem">print(f"Я {имя}, мне {возраст} лет...")</code><br><br>
+    Нарисуй: <strong>коробки-переменные</strong> — для каждой переменной нарисуй коробку с ярлычком! 🖍️📦</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-11.html" class="btn btn-prev">← Урок 11</a>
+  <a href="lesson-13.html" class="btn btn-next">Урок 13 →</a>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 14 — Python — пишем калькулятор!</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 14 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-13.html" class="btn btn-prev">← Урок 13</a>
+  <a href="lesson-15.html" class="btn btn-next">Урок 15 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 14</div>
+    <span class="lesson-emoji">🧮</span>
+    <h1 class="lesson-title">Python — пишем калькулятор!</h1>
+    <p class="lesson-subtitle">Создаём настоящую программу с вводом чисел пользователем!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Проверяем задачи с арифметикой</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–7 мин</span>
+        <div class="timeline-text">⌨️ Команда input() — ввод от пользователя</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">7–17 мин</span>
+        <div class="timeline-text">🧮 Пишем калькулятор вместе!</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">17–20 мин</span>
+        <div class="timeline-text">🎯 Тестируем и улучшаем</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="card">
+    <div class="card-title">⌨️ Команда input() — спрашиваем у пользователя</div>
+    <div class="block block-purple">
+      <div class="block-title">🗣️ input() — компьютер задаёт вопрос</div>
+      <p>Команда <strong>input()</strong> останавливает программу и ждёт, когда пользователь введёт что-то с клавиатуры!</p>
+    </div>
+    <div class="code-block">
+<span class="code-comment"># Спрашиваем имя</span>
+имя = <span class="code-keyword">input</span>(<span class="code-string">"Как тебя зовут? "</span>)
+<span class="code-keyword">print</span>(<span class="code-string">f"Привет, {имя}!"</span>)
+    </div>
+    <div class="block block-yellow" style="margin-top:12px">
+      <div class="block-title">⚠️ Важно! Числа нужно преобразовать</div>
+      <p>input() всегда возвращает <strong>текст</strong> (строку). Чтобы считать с числами, нужно написать <strong>int()</strong>!</p>
+    </div>
+    <div class="code-block">
+текст = <span class="code-keyword">input</span>(<span class="code-string">"Введи число: "</span>)  <span class="code-comment"># это текст "5"</span>
+число = <span class="code-keyword">int</span>(текст)            <span class="code-comment"># это число 5</span>
+<span class="code-keyword">print</span>(число + <span class="code-number">10</span>)              <span class="code-comment"># = 15</span>
+    </div>
+  </div>
+
+  <!-- КАЛЬКУЛЯТОР -->
+  <div class="card">
+    <div class="card-title">🧮 Пишем калькулятор!</div>
+    <div class="block block-green">
+      <div class="block-title">📋 Наш план:</div>
+      <p>1. Спрашиваем первое число<br>
+      2. Спрашиваем второе число<br>
+      3. Считаем все 4 действия<br>
+      4. Показываем результаты!</p>
+    </div>
+
+    <div class="code-block">
+<span class="code-comment"># 🧮 МОЙ КАЛЬКУЛЯТОР</span>
+<span class="code-keyword">print</span>(<span class="code-string">"=== 🧮 Мой Калькулятор ==="</span>)
+<span class="code-keyword">print</span>()
+
+<span class="code-comment"># Спрашиваем числа</span>
+число1 = <span class="code-keyword">int</span>(<span class="code-keyword">input</span>(<span class="code-string">"Введи первое число: "</span>))
+число2 = <span class="code-keyword">int</span>(<span class="code-keyword">input</span>(<span class="code-string">"Введи второе число: "</span>))
+
+<span class="code-comment"># Считаем</span>
+сумма    = число1 + число2
+разность = число1 - число2
+произв   = число1 * число2
+
+<span class="code-comment"># Показываем результаты</span>
+<span class="code-keyword">print</span>()
+<span class="code-keyword">print</span>(<span class="code-string">f"➕ {число1} + {число2} = {сумма}"</span>)
+<span class="code-keyword">print</span>(<span class="code-string">f"➖ {число1} - {число2} = {разность}"</span>)
+<span class="code-keyword">print</span>(<span class="code-string">f"✖️ {число1} × {число2} = {произв}"</span>)
+
+<span class="code-comment"># Деление — проверяем что не делим на 0!</span>
+<span class="code-keyword">if</span> число2 != <span class="code-number">0</span>:
+    частное = число1 / число2
+    <span class="code-keyword">print</span>(<span class="code-string">f"➗ {число1} ÷ {число2} = {частное}"</span>)
+<span class="code-keyword">else</span>:
+    <span class="code-keyword">print</span>(<span class="code-string">"➗ На ноль делить нельзя! 😅"</span>)
+
+<span class="code-keyword">print</span>()
+<span class="code-keyword">print</span>(<span class="code-string">"Спасибо за использование калькулятора! 🏆"</span>)
+    </div>
+  </div>
+
+  <!-- ПРИМЕР РАБОТЫ -->
+  <div class="card">
+    <div class="card-title">📺 Как работает наш калькулятор</div>
+    <div style="background:#064e3b; border-radius:16px; padding:20px; font-family:monospace; font-size:1rem; line-height:1.8">
+      <span style="color:#6ee7b7">=== 🧮 Мой Калькулятор ===</span><br>
+      <span style="color:#fbbf24">Введи первое число: </span><span style="color:white">12</span><br>
+      <span style="color:#fbbf24">Введи второе число: </span><span style="color:white">4</span><br><br>
+      <span style="color:#34d399">➕ 12 + 4 = 16</span><br>
+      <span style="color:#34d399">➖ 12 - 4 = 8</span><br>
+      <span style="color:#34d399">✖️ 12 × 4 = 48</span><br>
+      <span style="color:#34d399">➗ 12 ÷ 4 = 3.0</span><br><br>
+      <span style="color:#6ee7b7">Спасибо за использование калькулятора! 🏆</span>
+    </div>
+  </div>
+
+  <!-- ЧТО УЗНАЛИ НОВОЕ -->
+  <div class="card">
+    <div class="card-title">🆕 Что узнали нового</div>
+    <ul class="fun-list">
+      <li data-icon="⌨️"><strong>input()</strong> — спрашивает у пользователя данные</li>
+      <li data-icon="🔢"><strong>int()</strong> — превращает текст в число</li>
+      <li data-icon="❓"><strong>if / else</strong> — условие: «если... то... иначе...»</li>
+      <li data-icon="≠"><strong>!= </strong> — означает «не равно»</li>
+      <li data-icon="📝"><strong>print()</strong> без аргументов — пустая строка</li>
+    </ul>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Ты только что написал программу, которую используют миллионы людей каждый день! Все приложения для расчёта стоимости, конвертеры валют, банковские приложения — это усложнённые версии твоего калькулятора! Твой папа точно пишет такие программы на работе! 💼</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Улучши свой калькулятор:<br><br>
+    ⭐ <strong>Идея 1</strong>: Добавь возведение в степень (<strong>**</strong>)<br>
+    ⭐ <strong>Идея 2</strong>: Спроси имя пользователя и поздоровайся<br>
+    ⭐ <strong>Идея 3</strong>: Создай «Калькулятор площади» — спрашивай длину и ширину комнаты, считай площадь<br><br>
+    Нарисуй: <strong>дизайн своего калькулятора</strong> — как бы он выглядел если бы у него был экран и кнопки? 🖍️📱</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-13.html" class="btn btn-prev">← Урок 13</a>
+  <a href="lesson-15.html" class="btn btn-next">Урок 15 →</a>
+</nav>
+
+</body>
+</html>

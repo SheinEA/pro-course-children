@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 17 — AI создаёт игры!</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 17 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-16.html" class="btn btn-prev">← Урок 16</a>
+  <a href="lesson-18.html" class="btn btn-next">Урок 18 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 17</div>
+    <span class="lesson-emoji">🎯</span>
+    <h1 class="lesson-title">AI создаёт игры!</h1>
+    <p class="lesson-subtitle">Создаём игру «Угадай число» с помощью AI-помощника!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🤖 Показываем диалоги с AI из домашнего задания</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–7 мин</span>
+        <div class="timeline-text">🎮 Придумываем игру вместе с AI</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">7–15 мин</span>
+        <div class="timeline-text">💻 Понимаем и запускаем код из AI</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">15–20 мин</span>
+        <div class="timeline-text">🏆 Играем и добавляем свои идеи!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПРОЦЕСС РАБОТЫ С AI -->
+  <div class="card">
+    <div class="card-title">🤖 Как работать с AI для создания игры</div>
+    <div class="block block-purple">
+      <div class="block-title">Шаг 1 — Придумай идею</div>
+      <p>Сначала <strong>сам</strong> придумай игру. Что интересно? Что хочешь создать? AI поможет воплотить идею!</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">Шаг 2 — Опиши AI понятно</div>
+      <p>Расскажи AI подробно: что за игра, как играть, что нужно сделать. Чем понятнее — тем лучше код!</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">Шаг 3 — Разбери код</div>
+      <p>Не просто скопируй! Спроси AI: «Объясни что делает каждая строка» — так ты учишься!</p>
+    </div>
+    <div class="block block-orange">
+      <div class="block-title">Шаг 4 — Улучши своими руками</div>
+      <p>Добавь что-то своё! Измени текст, добавь цвета, придумай новое правило — сделай игру своей!</p>
+    </div>
+  </div>
+
+  <!-- ИГРА УГАДАЙ ЧИСЛО -->
+  <div class="card">
+    <div class="card-title">🎮 Игра «Угадай число»</div>
+    <div class="block block-purple">
+      <div class="block-title">📋 Правила игры</div>
+      <p>🎲 Компьютер загадывает число от 1 до 100<br>
+      🤔 Ты вводишь своё предположение<br>
+      📊 Компьютер говорит: больше, меньше или угадал!<br>
+      🏆 Цель: угадать за как можно меньше попыток!</p>
+    </div>
+  </div>
+
+  <!-- КОД ИГРЫ -->
+  <div class="card">
+    <div class="card-title">🐍 Код игры (создан с AI!)</div>
+    <div class="code-block">
+<span class="code-keyword">import</span> random  <span class="code-comment"># библиотека случайных чисел</span>
+
+<span class="code-comment"># 🎲 Компьютер загадывает число</span>
+загаданное = random.randint(<span class="code-number">1</span>, <span class="code-number">100</span>)
+попытки = <span class="code-number">0</span>
+
+<span class="code-keyword">print</span>(<span class="code-string">"🎮 Игра 'Угадай число'!"</span>)
+<span class="code-keyword">print</span>(<span class="code-string">"Я загадал число от 1 до 100."</span>)
+<span class="code-keyword">print</span>(<span class="code-string">"Попробуй угадать!"</span>)
+<span class="code-keyword">print</span>()
+
+<span class="code-comment"># 🔁 Игровой цикл</span>
+<span class="code-keyword">while True</span>:
+    угадка = <span class="code-keyword">int</span>(<span class="code-keyword">input</span>(<span class="code-string">"Твоё число: "</span>))
+    попытки = попытки + <span class="code-number">1</span>
+
+    <span class="code-keyword">if</span> угадка < загаданное:
+        <span class="code-keyword">print</span>(<span class="code-string">"📈 Моё число БОЛЬШЕ! Попробуй ещё."</span>)
+    <span class="code-keyword">elif</span> угадка > загаданное:
+        <span class="code-keyword">print</span>(<span class="code-string">"📉 Моё число МЕНЬШЕ! Попробуй ещё."</span>)
+    <span class="code-keyword">else</span>:
+        <span class="code-keyword">print</span>(<span class="code-string">f"🏆 УРА! Ты угадал за {попытки} попыток!"</span>)
+        <span class="code-keyword">break</span>  <span class="code-comment"># выходим из цикла</span>
+    </div>
+  </div>
+
+  <!-- ОБЪЯСНЕНИЕ КОДА -->
+  <div class="card">
+    <div class="card-title">🧠 Разбираем код по шагам</div>
+    <ul class="fun-list">
+      <li data-icon="📦"><strong>import random</strong> — берём коробку с инструментами для случайных чисел</li>
+      <li data-icon="🎲"><strong>random.randint(1, 100)</strong> — загадываем случайное число от 1 до 100</li>
+      <li data-icon="🔁"><strong>while True</strong> — повторяем до тех пор пока не угадаем</li>
+      <li data-icon="❓"><strong>if / elif / else</strong> — три варианта: меньше, больше, угадал!</li>
+      <li data-icon="🛑"><strong>break</strong> — остановить цикл, когда угадали</li>
+    </ul>
+  </div>
+
+  <!-- КАК УЛУЧШИТЬ -->
+  <div class="card">
+    <div class="card-title">⬆️ Как улучшить игру?</div>
+    <div class="block block-yellow">
+      <div class="block-title">💡 Идеи от AI и тебя!</div>
+    </div>
+    <ul class="fun-list">
+      <li data-icon="⏱️">Добавь ограничение попыток (например 7 попыток)</li>
+      <li data-icon="📊">Добавь уровни: лёгкий (1-10), средний (1-100), сложный (1-1000)</li>
+      <li data-icon="🏅">Добавь рейтинг: «Отлично» за 3 попытки, «Хорошо» за 7, «Старайся» за 10+</li>
+      <li data-icon="🔄">Спроси в конце «Хочешь сыграть ещё раз?»</li>
+      <li data-icon="🎵">Добавь эмодзи и красивые сообщения</li>
+    </ul>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Игра «Угадай число» — это не просто игра! Она показывает <strong>алгоритм двоичного поиска</strong>. Если всегда угадывать середину, то число от 1 до 100 можно найти максимум за <strong>7 попыток</strong>! А число от 1 до 1000000 — всего за 20 попыток! Это используется в компьютерах для быстрого поиска! 🔍</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Используй AI чтобы создать свою игру!<br><br>
+    🎮 <strong>Придумай игру</strong>: что угодно — викторина, угадай слово, гонки на числах...<br>
+    🤖 <strong>Попроси AI</strong>: «Помоги написать простую игру [название] на Python для 7-летнего»<br>
+    📖 <strong>Разбери код</strong>: спроси AI объяснить каждую строку<br>
+    ✏️ <strong>Измени что-то своё</strong>: добавь своё имя, свой текст, свои правила<br><br>
+    Нарисуй: <strong>афишу своей игры</strong> — название, скриншот, правила! 🖍️🎮</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-16.html" class="btn btn-prev">← Урок 16</a>
+  <a href="lesson-18.html" class="btn btn-next">Урок 18 →</a>
+</nav>
+
+</body>
+</html>

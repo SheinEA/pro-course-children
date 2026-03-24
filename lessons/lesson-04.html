@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 4 — Рабочий стол Windows</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 4 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-03.html" class="btn btn-prev">← Урок 3</a>
+  <a href="lesson-05.html" class="btn btn-next">Урок 5 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 4</div>
+    <span class="lesson-emoji">🗂️</span>
+    <h1 class="lesson-title">Рабочий стол Windows</h1>
+    <p class="lesson-subtitle">Файлы, папки, меню и корзина — учимся работать!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Вспоминаем операционные системы</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–8 мин</span>
+        <div class="timeline-text">🖥️ Что такое рабочий стол и его элементы</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">8–14 мин</span>
+        <div class="timeline-text">📁 Файлы и папки — как они устроены</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">14–20 мин</span>
+        <div class="timeline-text">🖱️ Контекстное меню + корзина</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- РАБОЧИЙ СТОЛ -->
+  <div class="card">
+    <div class="card-title">🖥️ Рабочий стол</div>
+    <div class="block block-purple">
+      <div class="block-title">📋 Рабочий стол — это главный экран</div>
+      <p>Когда ты включаешь компьютер и заходишь в Windows — первое, что ты видишь — это <strong>рабочий стол</strong>. Это как настоящий стол, на котором лежат твои вещи!</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:16px">
+      <div class="block block-blue" style="margin:0">
+        <div class="block-title">🎯 Панель задач</div>
+        <p>Полоска внизу экрана. Здесь кнопка ПУСК и открытые программы.</p>
+      </div>
+      <div class="block block-green" style="margin:0">
+        <div class="block-title">🏠 Кнопка ПУСК</div>
+        <p>Нажми — откроется список всех программ и настроек!</p>
+      </div>
+      <div class="block block-yellow" style="margin:0">
+        <div class="block-title">🖼️ Значки (иконки)</div>
+        <p>Маленькие картинки на столе — это ярлыки программ и файлов.</p>
+      </div>
+      <div class="block block-pink" style="margin:0">
+        <div class="block-title">🕐 Часы</div>
+        <p>В правом нижнем углу — время и дата.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ФАЙЛЫ И ПАПКИ -->
+  <div class="card">
+    <div class="card-title">📁 Файлы и папки</div>
+    <div class="block block-blue">
+      <div class="block-title">📄 Файл — это документ</div>
+      <p>Файл — это как <strong>листок бумаги</strong>. В нём хранится информация: текст, картинка, музыка или программа. У каждого файла есть имя и <strong>расширение</strong> (например: рисунок<strong>.jpg</strong>, документ<strong>.txt</strong>)</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">📁 Папка — это ящик для файлов</div>
+      <p>Папка — как <strong>ящик стола</strong>. Внутри могут быть файлы и другие папки. Папки помогают не потерять файлы!</p>
+    </div>
+
+    <div style="background:#1e1b4b; border-radius:16px; padding:18px; margin-top:12px; font-family:monospace; color:#e2e8f0; font-size:1rem; line-height:1.8">
+      <span style="color:#fbbf24">📁</span> Мои документы/<br>
+      &nbsp;&nbsp;<span style="color:#34d399">📁</span> Рисунки/<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa">📄</span> мой_рисунок.jpg<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa">📄</span> кот.png<br>
+      &nbsp;&nbsp;<span style="color:#34d399">📁</span> Уроки/<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#a78bfa">📄</span> урок1.txt
+    </div>
+  </div>
+
+  <!-- КОНТЕКСТНОЕ МЕНЮ -->
+  <div class="card">
+    <div class="card-title">🖱️ Контекстное меню</div>
+    <div class="block block-orange">
+      <div class="block-title">👆 Правая кнопка мыши — волшебная!</div>
+      <p>Нажми <strong>правую кнопку мыши</strong> на любом файле или папке — появится меню с действиями!</p>
+    </div>
+    <ul class="fun-list" style="margin-top:12px">
+      <li data-icon="📂">Открыть — открыть файл или папку</li>
+      <li data-icon="✂️">Вырезать — переместить в другое место</li>
+      <li data-icon="📋">Копировать — сделать копию</li>
+      <li data-icon="📌">Вставить — разместить скопированное</li>
+      <li data-icon="🗑️">Удалить — отправить в корзину</li>
+      <li data-icon="✏️">Переименовать — дать новое имя</li>
+    </ul>
+  </div>
+
+  <!-- КОРЗИНА -->
+  <div class="card">
+    <div class="card-title">🗑️ Корзина</div>
+    <div class="block block-pink">
+      <div class="block-title">♻️ Корзина — безопасное удаление</div>
+      <p>Когда ты удаляешь файл — он не пропадает сразу! Он отправляется в <strong>Корзину</strong>. Если ты передумал — можно достать обратно. Чтобы удалить навсегда — нужно <strong>очистить корзину</strong>.</p>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Первый рабочий стол с папками и файлами придумала компания <strong>Apple в 1984 году</strong>! До этого компьютеры показывали только текст — никаких картинок и папок. Это была настоящая революция! 🍎</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Нарисуй <strong>рабочий стол Windows</strong>!<br><br>
+    Нарисуй большой прямоугольник (экран монитора) и внутри:<br>
+    🖥️ Фоновая картинка (любая красивая!)<br>
+    📁 Несколько папок и файлов со значками<br>
+    ⬛ Панель задач внизу с кнопкой ПУСК<br>
+    🗑️ Корзину в углу<br><br>
+    Раскрась ярко и красиво! 🖍️</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-03.html" class="btn btn-prev">← Урок 3</a>
+  <a href="lesson-05.html" class="btn btn-next">Урок 5 →</a>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 9 — Scratch — первая анимация</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 9 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-08.html" class="btn btn-prev">← Урок 8</a>
+  <a href="lesson-10.html" class="btn btn-next">Урок 10 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 9</div>
+    <span class="lesson-emoji">🎬</span>
+    <h1 class="lesson-title">Scratch — первая анимация!</h1>
+    <p class="lesson-subtitle">Создаём мультфильм с котом и собакой!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Показываем домашнее задание в Scratch</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–7 мин</span>
+        <div class="timeline-text">🎭 Что такое анимация? Спрайты и фоны</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">7–17 мин</span>
+        <div class="timeline-text">🎬 Создаём анимацию: кот идёт по улице</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">17–20 мин</span>
+        <div class="timeline-text">▶️ Смотрим результат + задание</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- АНИМАЦИЯ -->
+  <div class="card">
+    <div class="card-title">🎬 Что такое анимация?</div>
+    <div class="block block-purple">
+      <div class="block-title">🎨 Анимация — много картинок подряд</div>
+      <p>Анимация — это <strong>много картинок</strong>, которые быстро сменяют друг друга. Когда картинки меняются быстро — кажется, что персонаж двигается! Как в мультфильме!</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">🐾 Спрайт — персонаж в Scratch</div>
+      <p>Каждый персонаж в Scratch называется <strong>спрайт</strong>. У него может быть несколько костюмов (положений тела). Меняем костюмы — персонаж "двигается"!</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">🌄 Фон — это декорации</div>
+      <p>За персонажами нарисован <strong>фон</strong> — улица, лес, космос, что хочешь! Фон можно нарисовать самому прямо в Scratch!</p>
+    </div>
+  </div>
+
+  <!-- ПРОЕКТ -->
+  <div class="card">
+    <div class="card-title">🎬 Проект: кот идёт по улице</div>
+    <p style="font-weight:700; color:#374151; margin-bottom:16px">Собери эти блоки для анимации:</p>
+
+    <div style="background:#f8fafc; border-radius:16px; padding:20px">
+      <div style="font-weight:800; color:#374151; margin-bottom:10px">📋 Код для кота:</div>
+      <div style="display:inline-flex; flex-direction:column; gap:2px">
+        <div style="background:#dc2626; border-radius:10px 10px 0 0; padding:10px 20px; color:white; font-weight:900">🚩 Когда зелёный флаг нажат</div>
+        <div style="background:#1d4ed8; padding:10px 20px; color:white; font-weight:900">📍 Перейти в x: -200 y: 0</div>
+        <div style="background:#dc2626; padding:10px 20px; color:white; font-weight:900">🔁 Повторять 40 раз</div>
+        <div style="background:#2563eb; padding:10px 30px; color:white; font-weight:900">👟 Идти 10 шагов</div>
+        <div style="background:#7c3aed; padding:10px 30px; color:white; font-weight:900">👗 Следующий костюм</div>
+        <div style="background:#0891b2; padding:10px 30px; color:white; font-weight:900">⏸️ Ждать 0.1 секунды</div>
+        <div style="background:#dc2626; border-radius:0 0 10px 10px; padding:10px 20px; color:white; font-weight:900">🔚 Конец повторения</div>
+      </div>
+    </div>
+
+    <div class="block block-yellow" style="margin-top:12px">
+      <div class="block-title">💡 Что происходит?</div>
+      <p>Кот начинает слева → двигается вправо → при каждом шаге меняет костюм (лапы) → выглядит как настоящая ходьба!</p>
+    </div>
+  </div>
+
+  <!-- БЛОКИ УПРАВЛЕНИЯ -->
+  <div class="card">
+    <div class="card-title">🧩 Важные блоки Scratch</div>
+    <div class="grid-2">
+      <div class="block block-purple" style="margin:0">
+        <div class="block-title" style="color:#dc2626">🔴 События</div>
+        <p>Когда что-то происходит: нажата клавиша, нажат флаг</p>
+      </div>
+      <div class="block block-blue" style="margin:0">
+        <div class="block-title" style="color:#2563eb">🔵 Движение</div>
+        <p>Идти, повернуть, перейти в точку</p>
+      </div>
+      <div class="block block-purple" style="margin:0">
+        <div class="block-title" style="color:#7c3aed">🟣 Внешность</div>
+        <p>Сказать, сменить костюм, показать/скрыть</p>
+      </div>
+      <div class="block block-orange" style="margin:0">
+        <div class="block-title" style="color:#d97706">🟡 Управление</div>
+        <p>Повторять, если, ждать — логика программы</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- КООРДИНАТЫ -->
+  <div class="card">
+    <div class="card-title">🗺️ Координаты в Scratch</div>
+    <div class="block block-teal">
+      <div class="block-title">X и Y — где находится спрайт</div>
+      <p><strong>X</strong> — горизонталь (влево/вправо): от -240 до 240<br>
+      <strong>Y</strong> — вертикаль (вниз/вверх): от -180 до 180<br>
+      Центр сцены: X=0, Y=0</p>
+    </div>
+    <div style="background:#1e1b4b; border-radius:16px; padding:20px; text-align:center; margin-top:12px">
+      <div style="position:relative; width:240px; height:160px; border:2px solid #374151; margin:0 auto; border-radius:8px; background:#0f172a">
+        <div style="position:absolute; top:50%; left:0; right:0; height:1px; background:#374151"></div>
+        <div style="position:absolute; left:50%; top:0; bottom:0; width:1px; background:#374151"></div>
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:1.5rem">🐱</div>
+        <div style="position:absolute; bottom:4px; left:4px; color:#94a3b8; font-size:0.65rem; font-weight:700">X=-240</div>
+        <div style="position:absolute; bottom:4px; right:4px; color:#94a3b8; font-size:0.65rem; font-weight:700">X=240</div>
+        <div style="position:absolute; top:4px; left:50%; transform:translateX(-50%); color:#94a3b8; font-size:0.65rem; font-weight:700">Y=180</div>
+        <div style="position:absolute; bottom:4px; left:50%; transform:translateX(-50%); color:#94a3b8; font-size:0.65rem; font-weight:700">Y=-180</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Первый мультфильм в истории был создан в <strong>1908 году</strong> — это было 250 рисунков на бумаге. Сейчас компьютерная анимация рисует <strong>24 картинки в секунду</strong> — это делает движение плавным и реалистичным! В Pixar (создатели «Тачки», «Валл-И») над одним фильмом работают сотни программистов! 🎬</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Сделай анимацию в Scratch:<br><br>
+    🎬 <strong>Анимация</strong>: кот идёт и встречает другого персонажа<br>
+    💬 <strong>Диалог</strong>: кот говорит «Привет!», другой отвечает<br>
+    🌄 <strong>Фон</strong>: нарисуй или выбери красивый фон<br><br>
+    И нарисуй на бумаге: <strong>раскадровку</strong> своей анимации — 4 картинки, что происходит в каждой! 🖍️</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-08.html" class="btn btn-prev">← Урок 8</a>
+  <a href="lesson-10.html" class="btn btn-next">Урок 10 →</a>
+</nav>
+
+</body>
+</html>

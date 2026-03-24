@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 13 — Python — арифметика</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 13 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-12.html" class="btn btn-prev">← Урок 12</a>
+  <a href="lesson-14.html" class="btn btn-next">Урок 14 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 13</div>
+    <span class="lesson-emoji">➕</span>
+    <h1 class="lesson-title">Python — арифметика!</h1>
+    <p class="lesson-subtitle">Компьютер умеет считать лучше любого калькулятора!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Проверяем анкеты с переменными</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–9 мин</span>
+        <div class="timeline-text">➕➖✖️➗ Математические операции в Python</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">9–16 мин</span>
+        <div class="timeline-text">💻 Пишем примеры и задачи в Python</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">16–20 мин</span>
+        <div class="timeline-text">🧠 Решаем задачки с помощью Python</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ОПЕРАЦИИ -->
+  <div class="card">
+    <div class="card-title">🧮 Математика в Python</div>
+    <div class="grid-2">
+      <div class="block block-blue" style="margin:0">
+        <div class="block-title" style="font-size:1.5rem">➕ Сложение</div>
+        <div class="code-block" style="margin-top:8px">
+<span class="code-number">5</span> + <span class="code-number">3</span> = <span class="code-output">8</span>
+        </div>
+      </div>
+      <div class="block block-pink" style="margin:0">
+        <div class="block-title" style="font-size:1.5rem">➖ Вычитание</div>
+        <div class="code-block" style="margin-top:8px">
+<span class="code-number">10</span> - <span class="code-number">4</span> = <span class="code-output">6</span>
+        </div>
+      </div>
+      <div class="block block-green" style="margin:0">
+        <div class="block-title" style="font-size:1.5rem">✖️ Умножение</div>
+        <div class="code-block" style="margin-top:8px">
+<span class="code-number">3</span> * <span class="code-number">4</span> = <span class="code-output">12</span>
+        </div>
+      </div>
+      <div class="block block-yellow" style="margin:0">
+        <div class="block-title" style="font-size:1.5rem">➗ Деление</div>
+        <div class="code-block" style="margin-top:8px">
+<span class="code-number">15</span> / <span class="code-number">3</span> = <span class="code-output">5.0</span>
+        </div>
+      </div>
+    </div>
+    <div class="block block-purple" style="margin-top:12px">
+      <div class="block-title">🔣 Знаки в Python</div>
+      <p>Умножение = звёздочка <strong>*</strong><br>
+      Деление = слэш <strong>/</strong><br>
+      Остаток от деления = <strong>%</strong><br>
+      Степень = <strong>**</strong> (например 2**3 = 8)</p>
+    </div>
+  </div>
+
+  <!-- ПРИМЕРЫ -->
+  <div class="card">
+    <div class="card-title">💻 Примеры на Python</div>
+    <div class="code-block">
+<span class="code-comment"># Простые примеры</span>
+<span class="code-keyword">print</span>(<span class="code-number">5</span> + <span class="code-number">3</span>)    <span class="code-comment"># = 8</span>
+<span class="code-keyword">print</span>(<span class="code-number">10</span> - <span class="code-number">4</span>)   <span class="code-comment"># = 6</span>
+<span class="code-keyword">print</span>(<span class="code-number">3</span> * <span class="code-number">4</span>)    <span class="code-comment"># = 12</span>
+<span class="code-keyword">print</span>(<span class="code-number">15</span> / <span class="code-number">3</span>)   <span class="code-comment"># = 5.0</span>
+
+<span class="code-comment"># С переменными</span>
+яблоки = <span class="code-number">8</span>
+съел = <span class="code-number">3</span>
+осталось = яблоки - съел
+<span class="code-keyword">print</span>(<span class="code-string">f"Осталось яблок: {осталось}"</span>)
+    </div>
+    <div class="block block-green" style="margin-top:12px">
+      <div class="block-title">📺 Результат:</div>
+      <div class="code-block" style="margin-top:8px; background:#064e3b">
+<span class="code-output">8</span>
+<span class="code-output">6</span>
+<span class="code-output">12</span>
+<span class="code-output">5.0</span>
+<span class="code-output">Осталось яблок: 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЗАДАЧИ -->
+  <div class="card">
+    <div class="card-title">🧠 Задачи в Python</div>
+    <div class="block block-orange">
+      <div class="block-title">🍕 Задача 1: Пицца</div>
+      <p>В пицце 8 кусков. Вас 3 человека. Сколько кусков достанется каждому?</p>
+    </div>
+    <div class="code-block">
+кусков = <span class="code-number">8</span>
+человек = <span class="code-number">3</span>
+каждому = кусков // человек  <span class="code-comment"># // = деление без остатка</span>
+остаток = кусков % человек   <span class="code-comment"># % = остаток</span>
+<span class="code-keyword">print</span>(<span class="code-string">f"Каждому: {каждому} кусков"</span>)
+<span class="code-keyword">print</span>(<span class="code-string">f"Лишних кусков: {остаток}"</span>)
+    </div>
+
+    <div class="block block-teal" style="margin-top:12px">
+      <div class="block-title">🚀 Задача 2: Скорость ракеты</div>
+      <p>Ракета летит со скоростью 7900 метров в секунду. Сколько километров она пролетит за 1 минуту?</p>
+    </div>
+    <div class="code-block">
+скорость_мс = <span class="code-number">7900</span>   <span class="code-comment"># метров в секунду</span>
+секунд = <span class="code-number">60</span>             <span class="code-comment"># 1 минута</span>
+метров = скорость_мс * секунд
+километров = метров / <span class="code-number">1000</span>
+<span class="code-keyword">print</span>(<span class="code-string">f"Ракета летит {километров} км за минуту!"</span>)
+    </div>
+  </div>
+
+  <!-- ПОРЯДОК ДЕЙСТВИЙ -->
+  <div class="card">
+    <div class="card-title">📐 Порядок действий — как в математике!</div>
+    <div class="block block-purple">
+      <div class="block-title">Python умеет скобки!</div>
+      <p>Правила те же, что в математике: сначала скобки, потом * и /, потом + и -</p>
+    </div>
+    <div class="code-block">
+<span class="code-keyword">print</span>(<span class="code-number">2</span> + <span class="code-number">3</span> * <span class="code-number">4</span>)    <span class="code-comment"># = 14 (сначала умножение!)</span>
+<span class="code-keyword">print</span>((<span class="code-number">2</span> + <span class="code-number">3</span>) * <span class="code-number">4</span>)  <span class="code-comment"># = 20 (сначала скобки!)</span>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Первый <strong>электронный калькулятор</strong> появился в 1961 году и стоил как автомобиль! Сегодня Python за долю секунды считает задачи, которые раньше решали часами на суперкомпьютерах. Учёные используют Python для расчётов траектории ракет, прогноза погоды и поиска лекарств от болезней! 🚀</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Реши задачи с помощью Python:<br><br>
+    🍎 <strong>Задача 1</strong>: У тебя 25 конфет, ты раздал 8 друзьям — по 2 конфеты каждому. Сколько осталось?<br>
+    🚀 <strong>Задача 2</strong>: Самолёт летит 800 км/ч. За 3 часа — сколько км?<br>
+    🎂 <strong>Задача 3</strong>: Сколько дней до твоего следующего дня рождения? (сейчас ты знаешь дату!)<br><br>
+    Нарисуй: <strong>машину-робота</strong> который умеет считать с примерами на боках! 🖍️🤖</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-12.html" class="btn btn-prev">← Урок 12</a>
+  <a href="lesson-14.html" class="btn btn-next">Урок 14 →</a>
+</nav>
+
+</body>
+</html>

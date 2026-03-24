@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 8 — Scratch — что такое программирование?</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 8 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-07.html" class="btn btn-prev">← Урок 7</a>
+  <a href="lesson-09.html" class="btn btn-next">Урок 9 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 8</div>
+    <span class="lesson-emoji">🐱</span>
+    <h1 class="lesson-title">Scratch — что такое программирование?</h1>
+    <p class="lesson-subtitle">Учимся давать команды компьютеру с помощью блоков!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Проверяем навыки печати</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–8 мин</span>
+        <div class="timeline-text">🤔 Что такое программирование?</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">8–15 мин</span>
+        <div class="timeline-text">🐱 Открываем Scratch и изучаем интерфейс</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">15–20 мин</span>
+        <div class="timeline-text">🎯 Первая программа — движение кота</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЧТО ТАКОЕ ПРОГРАММИРОВАНИЕ -->
+  <div class="card">
+    <div class="card-title">💡 Что такое программирование?</div>
+    <div class="block block-purple">
+      <div class="block-title">📋 Программа — это список команд</div>
+      <p>Представь, что ты говоришь роботу что делать: «Шагни вперёд. Повернись. Возьми предмет.» Вот это и есть <strong>программа</strong>! Компьютер делает ровно то, что ты ему приказал.</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">👨‍💻 Программист — это тот, кто пишет команды</div>
+      <p>Программист — как <strong>режиссёр в кино</strong>! Он говорит каждому персонажу (программе) что делать, когда и как.</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">🌍 Программисты создают всё!</div>
+      <p>Игры, мультфильмы, приложения, сайты — всё это написали программисты. Твой папа тоже пишет программы!</p>
+    </div>
+  </div>
+
+  <!-- ЧТО ТАКОЕ SCRATCH -->
+  <div class="card">
+    <div class="card-title">🐱 Знакомьтесь — Scratch!</div>
+    <div class="block block-orange">
+      <div class="block-title">🧩 Scratch — программирование блоками</div>
+      <p>Scratch — это особый язык программирования для детей! Вместо того чтобы печатать код буквами, ты <strong>складываешь блоки</strong> как конструктор LEGO!</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:12px">
+      <div class="icon-card">
+        <span class="icon">🎨</span>
+        <div class="label">Создан в MIT<br><small style="color:#6b7280">Лучший университет мира</small></div>
+      </div>
+      <div class="icon-card">
+        <span class="icon">🆓</span>
+        <div class="label">Бесплатно<br><small style="color:#6b7280">Для всех детей мира</small></div>
+      </div>
+      <div class="icon-card">
+        <span class="icon">🌐</span>
+        <div class="label">scratch.mit.edu<br><small style="color:#6b7280">Работает в браузере</small></div>
+      </div>
+      <div class="icon-card">
+        <span class="icon">👦</span>
+        <div class="label">От 5 лет<br><small style="color:#6b7280">Миллионы детей учатся</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ИНТЕРФЕЙС SCRATCH -->
+  <div class="card">
+    <div class="card-title">🖥️ Как выглядит Scratch</div>
+    <div style="background:#1e1b4b; border-radius:16px; overflow:hidden">
+      <div style="background:#4c1d95; padding:10px 16px; font-weight:900; color:white; font-size:0.9rem">scratch.mit.edu</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; min-height:200px; gap:0">
+        <div style="background:#f97316; padding:16px; border-right:2px solid #1e1b4b">
+          <div style="color:white; font-weight:900; margin-bottom:8px; font-size:0.9rem">🧩 Блоки</div>
+          <div style="background:#dc2626; border-radius:8px; padding:6px 10px; color:white; font-size:0.8rem; font-weight:700; margin-bottom:4px">когда 🚩 нажата</div>
+          <div style="background:#2563eb; border-radius:8px; padding:6px 10px; color:white; font-size:0.8rem; font-weight:700; margin-bottom:4px">идти 10 шагов</div>
+          <div style="background:#7c3aed; border-radius:8px; padding:6px 10px; color:white; font-size:0.8rem; font-weight:700">сказать Привет!</div>
+        </div>
+        <div style="background:#374151; padding:16px; border-right:2px solid #1e1b4b">
+          <div style="color:white; font-weight:900; margin-bottom:8px; font-size:0.9rem">📝 Скрипт</div>
+          <div style="display:inline-block">
+            <div style="background:#dc2626; border-radius:8px 8px 0 0; padding:6px 10px; color:white; font-size:0.75rem; font-weight:700">когда 🚩 нажата</div>
+            <div style="background:#2563eb; padding:6px 10px; color:white; font-size:0.75rem; font-weight:700">идти 10 шагов</div>
+            <div style="background:#7c3aed; border-radius:0 0 8px 8px; padding:6px 10px; color:white; font-size:0.75rem; font-weight:700">сказать Привет!</div>
+          </div>
+        </div>
+        <div style="background:#064e3b; padding:16px">
+          <div style="color:white; font-weight:900; margin-bottom:8px; font-size:0.9rem">🎬 Сцена</div>
+          <div style="background:#065f46; border-radius:8px; height:80px; display:flex; align-items:center; justify-content:center; font-size:2rem">🐱</div>
+          <div style="color:#6ee7b7; font-size:0.75rem; font-weight:700; margin-top:6px; text-align:center">Кот Скретч</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПЕРВАЯ ПРОГРАММА -->
+  <div class="card">
+    <div class="card-title">🎯 Первая программа</div>
+    <div class="block block-purple">
+      <div class="block-title">Задание: заставь кота сказать «Привет!»</div>
+      <p>Собери эти блоки по порядку:</p>
+    </div>
+    <div style="background:#f8fafc; border-radius:16px; padding:20px; margin-top:12px">
+      <div style="display:inline-flex; flex-direction:column; gap:2px">
+        <div style="background:#dc2626; border-radius:10px 10px 0 0; padding:10px 20px; color:white; font-weight:900; font-size:1rem">🚩 Когда зелёный флаг нажат</div>
+        <div style="background:#7c3aed; padding:10px 20px; color:white; font-weight:900; font-size:1rem">💬 Сказать «Привет! Я кот Скретч!»</div>
+        <div style="background:#2563eb; border-radius:0 0 10px 10px; padding:10px 20px; color:white; font-weight:900; font-size:1rem">😴 Ждать 2 секунды</div>
+      </div>
+    </div>
+    <div class="block block-green" style="margin-top:12px">
+      <div class="block-title">✅ Нажми зелёный флаг — и кот скажет привет!</div>
+      <p>Поздравляю! Ты только что написал свою первую программу! 🎉</p>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>В Scratch зарегистрировано более <strong>100 миллионов</strong> проектов! Дети со всего мира создают игры, мультики и истории. Самые популярные проекты посмотрели миллионы людей! Может, следующим будет твой? 🌟</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Зайди на <strong>scratch.mit.edu</strong> и сделай так, чтобы:<br><br>
+    🐱 Кот <strong>двигался</strong> 10 шагов<br>
+    💬 Кот <strong>сказал</strong> своё имя<br>
+    🔄 Кот <strong>повернулся</strong> и вернулся обратно<br><br>
+    Также нарисуй: <strong>как выглядит Scratch</strong> — три части (блоки, скрипт, сцена)! 🖍️</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-07.html" class="btn btn-prev">← Урок 7</a>
+  <a href="lesson-09.html" class="btn btn-next">Урок 9 →</a>
+</nav>
+
+</body>
+</html>

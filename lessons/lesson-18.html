@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 18 — Финальный проект — Я ПРОГРАММИСТ!</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.achievement {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+  border: 3px solid #d97706;
+  box-shadow: 0 8px 32px rgba(251,191,36,0.4);
+}
+.achievement-icon { font-size: 3rem; display: block; margin-bottom: 8px; }
+.achievement-title { font-size: 1.2rem; font-weight: 900; color: #78350f; margin-bottom: 4px; }
+.achievement-text { font-size: 0.9rem; color: #92400e; font-weight: 600; }
+
+@keyframes confetti {
+  0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+.confetti-container {
+  position: fixed; top: 0; left: 0; width: 100%; height: 0;
+  pointer-events: none; z-index: 100;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 18 из 18 — ФИНАЛ! 🏆</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-17.html" class="btn btn-prev">← Урок 17</a>
+  <span class="btn btn-disabled">Финал! 🏆</span>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero" style="background: linear-gradient(135deg, #fef3c7, #ddd6fe, #d1fae5)">
+    <div class="lesson-number" style="background: linear-gradient(135deg, #d97706, #7c3aed)">🏆 ФИНАЛ</div>
+    <span class="lesson-emoji">🏆</span>
+    <h1 class="lesson-title">Я — ПРОГРАММИСТ!</h1>
+    <p class="lesson-subtitle">Финальный проект: представляем всё что научились!</p>
+    <div class="stars">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</div>
+    <p style="font-size:1rem; color:#7c3aed; font-weight:800; margin-top:12px">Ты прошёл 18 уроков! Это НЕВЕРОЯТНО! 🎉</p>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 Финальный урок <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–5 мин</span>
+        <div class="timeline-text">🎮 Показываем игру из урока 17</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">5–12 мин</span>
+        <div class="timeline-text">🎤 Рассказываем что научились за курс</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">12–18 мин</span>
+        <div class="timeline-text">🏅 Получаем дипломы и достижения!</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">18–20 мин</span>
+        <div class="timeline-text">🚀 Что дальше — план на будущее!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЧТО ТЫ УЗНАЛ -->
+  <div class="card">
+    <div class="card-title">📚 Всё что ты узнал за курс!</div>
+    <div class="grid-2">
+      <div class="block block-blue" style="margin:0">
+        <div class="block-title">💻 Компьютеры</div>
+        <p>✅ Устройства ввода/вывода<br>✅ Системный блок и процессор<br>✅ Операционные системы<br>✅ Рабочий стол Windows</p>
+      </div>
+      <div class="block block-green" style="margin:0">
+        <div class="block-title">🌐 Интернет</div>
+        <p>✅ Как работает интернет<br>✅ Браузеры и адреса сайтов<br>✅ Правила безопасности</p>
+      </div>
+      <div class="block block-yellow" style="margin:0">
+        <div class="block-title">⌨️ Клавиатура</div>
+        <p>✅ Зоны клавиатуры<br>✅ Домашний ряд (ASDF JKL)<br>✅ Слепой метод печати</p>
+      </div>
+      <div class="block block-pink" style="margin:0">
+        <div class="block-title">🐱 Scratch</div>
+        <p>✅ Что такое программирование<br>✅ Спрайты и блоки<br>✅ Анимация и первая игра</p>
+      </div>
+      <div class="block block-purple" style="margin:0">
+        <div class="block-title">🐍 Python</div>
+        <p>✅ print() и input()<br>✅ Переменные и типы данных<br>✅ Арифметика и калькулятор</p>
+      </div>
+      <div class="block block-teal" style="margin:0">
+        <div class="block-title">🤖 AI и IDE</div>
+        <p>✅ VS Code — редактор кода<br>✅ Что такое AI<br>✅ Создание игры с AI</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ДОСТИЖЕНИЯ -->
+  <div class="card">
+    <div class="card-title">🏅 Твои достижения!</div>
+    <div class="grid-3">
+      <div class="achievement">
+        <span class="achievement-icon">💻</span>
+        <div class="achievement-title">Знаток компьютера</div>
+        <div class="achievement-text">Знаешь все части ПК</div>
+      </div>
+      <div class="achievement">
+        <span class="achievement-icon">⌨️</span>
+        <div class="achievement-title">Быстрые пальцы</div>
+        <div class="achievement-text">Умеешь печатать!</div>
+      </div>
+      <div class="achievement">
+        <span class="achievement-icon">🐱</span>
+        <div class="achievement-title">Scratch-мастер</div>
+        <div class="achievement-text">Создал игру в Scratch</div>
+      </div>
+      <div class="achievement">
+        <span class="achievement-icon">🐍</span>
+        <div class="achievement-title">Python-джуниор</div>
+        <div class="achievement-text">Написал настоящий код</div>
+      </div>
+      <div class="achievement">
+        <span class="achievement-icon">🧮</span>
+        <div class="achievement-title">Создатель программ</div>
+        <div class="achievement-text">Написал калькулятор</div>
+      </div>
+      <div class="achievement">
+        <span class="achievement-icon">🤖</span>
+        <div class="achievement-title">AI-пользователь</div>
+        <div class="achievement-text">Создал игру с AI!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ДИПЛОМ -->
+  <div style="background: linear-gradient(135deg, #1e1b4b, #312e81, #4c1d95); border-radius: 28px; padding: 40px; text-align: center; margin-bottom: 20px; border: 4px solid #fbbf24; box-shadow: 0 16px 48px rgba(0,0,0,0.4)">
+    <div style="font-size:1rem; color:#fbbf24; font-weight:900; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px">🎓 ДИПЛОМ ПРОГРАММИСТА 🎓</div>
+    <div style="font-size:3rem; margin-bottom:16px">🏆</div>
+    <div style="font-size:1.5rem; color:white; font-weight:900; margin-bottom:8px">Настоящим удостоверяется, что</div>
+    <div style="font-size:2.5rem; color:#fbbf24; font-weight:900; margin-bottom:8px">____________________</div>
+    <div style="font-size:1.1rem; color:rgba(255,255,255,0.9); font-weight:700; max-width:400px; margin:0 auto 20px; line-height:1.6">
+      успешно прошёл курс<br>
+      <strong style="color:#a78bfa">«IT-Курс для Героев»</strong><br>
+      и является настоящим программистом!
+    </div>
+    <div style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap">
+      <div style="color:rgba(255,255,255,0.7); font-size:0.9rem">
+        <div style="border-top:2px solid rgba(255,255,255,0.4); padding-top:8px; margin-top:24px; min-width:120px">Подпись папы</div>
+      </div>
+      <div style="color:rgba(255,255,255,0.7); font-size:0.9rem">
+        <div style="border-top:2px solid rgba(255,255,255,0.4); padding-top:8px; margin-top:24px; min-width:120px">Дата</div>
+      </div>
+    </div>
+    <div style="margin-top:20px; font-size:1.5rem">⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ЧТО ДАЛЬШЕ -->
+  <div class="card">
+    <div class="card-title">🚀 Что дальше?</div>
+    <div class="block block-purple">
+      <div class="block-title">⌨️ Продолжай тренировать печать</div>
+      <p>Каждый день по 5-10 минут на <strong>typing.com</strong>. Через 3 месяца будешь печатать как настоящий программист!</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">🐱 Создавай проекты в Scratch</div>
+      <p>Придумывай игры и делись ими! Зарегистрируйся на scratch.mit.edu и создай профиль!</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">🐍 Учи Python дальше!</div>
+      <p>Следующий шаг — <strong>циклы и функции</strong>. Потом — создание графических игр с pygame!</p>
+    </div>
+    <div class="block block-orange">
+      <div class="block-title">🤖 Используй AI как помощника</div>
+      <p>Claude и ChatGPT — твои учителя 24/7! Задавай вопросы, учись, экспериментируй!</p>
+    </div>
+    <div class="block block-pink">
+      <div class="block-title">👨‍💻 Учись у папы!</div>
+      <p>У тебя дома живёт настоящий профессиональный программист! Спрашивай, смотри как он работает, решайте задачки вместе!</p>
+    </div>
+  </div>
+
+  <!-- ФИНАЛЬНОЕ ПОСЛАНИЕ -->
+  <div style="background: linear-gradient(135deg, #d1fae5, #a7f3d0, #6ee7b7); border-radius: 24px; padding: 32px; text-align: center; margin-bottom: 20px; border: 3px solid #10b981">
+    <div style="font-size:2.5rem; margin-bottom:16px">🌟</div>
+    <h2 style="font-size:1.8rem; font-weight:900; color:#064e3b; margin-bottom:16px">Ты ГЕРОЙ!</h2>
+    <p style="font-size:1.1rem; color:#065f46; font-weight:700; line-height:1.7; max-width:500px; margin:0 auto">
+      Ты прошёл целый курс программирования в 7 лет!<br>
+      Ты знаешь больше, чем большинство взрослых.<br>
+      Ты умеешь писать настоящий код.<br>
+      Ты создал настоящие программы!<br><br>
+      <strong>Программирование — это суперсила.</strong><br>
+      Береги её и используй для добра! 🦸‍♂️
+    </p>
+    <div style="font-size:2rem; margin-top:20px">🚀💻🎮🤖⭐</div>
+  </div>
+
+  <div class="homework">
+    <div class="homework-title">🎨 Финальное задание</div>
+    <p>Создай свой <strong>ПОРТФОЛИО программиста</strong>!<br><br>
+    📋 <strong>Страница 1</strong>: Кто я — имя, возраст, что умею<br>
+    🎮 <strong>Страница 2</strong>: Мои проекты — Scratch-игра, калькулятор, игра на Python<br>
+    🎨 <strong>Страница 3</strong>: Мои рисунки со всех домашних заданий<br>
+    🚀 <strong>Страница 4</strong>: Мои планы — что хочу создать в будущем<br><br>
+    Оформи красиво и покажи всей семье! Ты — ПРОГРАММИСТ! 🏆</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-17.html" class="btn btn-prev">← Урок 17</a>
+  <span class="btn btn-disabled">🎓 Курс завершён!</span>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 6 — Знакомство с клавиатурой</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.keyboard {
+  background: #1e1b4b;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+}
+.key-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  justify-content: center;
+}
+.key {
+  background: #374151;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: center;
+  border-bottom: 3px solid #1f2937;
+  font-family: inherit;
+}
+.key-home { background: #7c3aed; border-bottom-color: #4c1d95; }
+.key-space { min-width: 160px; background: #374151; }
+.key-special { background: #1d4ed8; min-width: 50px; font-size: 0.65rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 6 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-05.html" class="btn btn-prev">← Урок 5</a>
+  <a href="lesson-07.html" class="btn btn-next">Урок 7 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 6</div>
+    <span class="lesson-emoji">⌨️</span>
+    <h1 class="lesson-title">Знакомство с клавиатурой</h1>
+    <p class="lesson-subtitle">Узнаём зоны клавиатуры и правильное положение рук!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🔄 Вспоминаем интернет и браузеры</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–8 мин</span>
+        <div class="timeline-text">⌨️ Зоны клавиатуры — знакомство</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">8–14 мин</span>
+        <div class="timeline-text">✋ Правильное положение рук — «дом»</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">14–20 мин</span>
+        <div class="timeline-text">🎯 Практика: пишем первые слова</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ЗОНЫ КЛАВИАТУРЫ -->
+  <div class="card">
+    <div class="card-title">⌨️ Зоны клавиатуры</div>
+    <div class="keyboard">
+      <div class="key-row">
+        <div class="key key-special">Esc</div>
+        <div class="key">F1</div><div class="key">F2</div><div class="key">F3</div>
+        <div class="key">F4</div><div class="key">F5</div><div class="key">F6</div>
+        <div class="key">F7</div><div class="key">F8</div>
+      </div>
+      <div class="key-row">
+        <div class="key">~</div><div class="key">1</div><div class="key">2</div>
+        <div class="key">3</div><div class="key">4</div><div class="key">5</div>
+        <div class="key">6</div><div class="key">7</div><div class="key">8</div>
+        <div class="key">9</div><div class="key">0</div>
+        <div class="key key-special">Back</div>
+      </div>
+      <div class="key-row">
+        <div class="key key-special">Tab</div>
+        <div class="key">Q</div><div class="key">W</div><div class="key">E</div>
+        <div class="key">R</div><div class="key">T</div><div class="key">Y</div>
+        <div class="key">U</div><div class="key">I</div><div class="key">O</div>
+        <div class="key">P</div>
+      </div>
+      <div class="key-row">
+        <div class="key key-special">Caps</div>
+        <div class="key key-home">A</div><div class="key key-home">S</div>
+        <div class="key key-home">D</div><div class="key key-home">F</div>
+        <div class="key">G</div><div class="key">H</div>
+        <div class="key key-home">J</div><div class="key key-home">K</div>
+        <div class="key key-home">L</div>
+        <div class="key key-special">Enter</div>
+      </div>
+      <div class="key-row">
+        <div class="key key-special">Shift</div>
+        <div class="key">Z</div><div class="key">X</div><div class="key">C</div>
+        <div class="key">V</div><div class="key">B</div><div class="key">N</div>
+        <div class="key">M</div>
+        <div class="key key-special">Shift</div>
+      </div>
+      <div class="key-row">
+        <div class="key key-special">Ctrl</div>
+        <div class="key key-special">Alt</div>
+        <div class="key key-space">ПРОБЕЛ</div>
+        <div class="key key-special">Alt</div>
+        <div class="key key-special">Ctrl</div>
+      </div>
+    </div>
+    <p style="color:#6b7280; font-size:0.85rem; text-align:center; font-weight:700">🟣 — «домашний ряд» (ASDF JKL:)</p>
+  </div>
+
+  <!-- БЛОКИ КЛАВИШ -->
+  <div class="card">
+    <div class="card-title">🗺️ Группы клавиш</div>
+    <div class="block block-purple">
+      <div class="block-title">📝 Буквенные клавиши</div>
+      <p>26 букв английского алфавита. Главная часть клавиатуры — здесь мы пишем слова!</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">🔢 Цифровые клавиши</div>
+      <p>Ряд сверху — цифры 0–9. Можно печатать числа и специальные символы (! @ # $)</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">⚙️ Специальные клавиши</div>
+      <p><strong>Enter</strong> — подтвердить, <strong>Backspace</strong> — стереть, <strong>Shift</strong> — большие буквы, <strong>Пробел</strong> — пробел между словами</p>
+    </div>
+    <div class="block block-yellow">
+      <div class="block-title">🎯 Клавиши-стрелки</div>
+      <p>↑ ↓ ← → — перемещают курсор по тексту</p>
+    </div>
+  </div>
+
+  <!-- ДОМАШНИЙ РЯД -->
+  <div class="card">
+    <div class="card-title">✋ Правильное положение рук</div>
+    <div class="block block-pink">
+      <div class="block-title">🏠 «Домашний ряд» — ASDF JKL:</div>
+      <p>Это строчка посередине клавиатуры. Пальцы всегда возвращаются сюда!</p>
+    </div>
+    <div class="grid-2" style="margin-top:12px">
+      <div class="block block-purple" style="margin:0">
+        <div class="block-title">✋ Левая рука</div>
+        <p>Мизинец → A<br>Безымянный → S<br>Средний → D<br>Указательный → F</p>
+      </div>
+      <div class="block block-blue" style="margin:0">
+        <div class="block-title">🤚 Правая рука</div>
+        <p>Указательный → J<br>Средний → K<br>Безымянный → L<br>Мизинец → :</p>
+      </div>
+    </div>
+    <div class="block block-green" style="margin-top:12px">
+      <div class="block-title">👍 Большие пальцы — ПРОБЕЛ</div>
+      <p>Оба больших пальца держатся над пробелом!</p>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Самый быстрый человек в мире печатает <strong>216 слов в минуту</strong>! Это как если бы ты прочитал целую страницу книги... но напечатал её! Чтобы так печатать, нужно тренироваться несколько лет. А мы начнём прямо сейчас! 🏆</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Нарисуй <strong>клавиатуру</strong>!<br><br>
+    Нарисуй все ряды клавиш и подпиши:<br>
+    🟣 <strong>Домашний ряд</strong> — закрась фиолетовым (ASDF JKL:)<br>
+    📝 <strong>Буквенные клавиши</strong> — закрась голубым<br>
+    ⚙️ <strong>Специальные клавиши</strong> — закрась оранжевым<br><br>
+    Также напиши: какая рука нажимает F и какая J? 🖍️</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-05.html" class="btn btn-prev">← Урок 5</a>
+  <a href="lesson-07.html" class="btn btn-next">Урок 7 →</a>
+</nav>
+
+</body>
+</html>

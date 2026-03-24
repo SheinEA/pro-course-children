@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Урок 10 — Scratch — первая игра!</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">🚀 IT-Курс</div>
+  <div class="header-lesson">Урок 10 из 18</div>
+</div>
+
+<nav class="nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-09.html" class="btn btn-prev">← Урок 9</a>
+  <a href="lesson-11.html" class="btn btn-next">Урок 11 →</a>
+</nav>
+
+<div class="container">
+
+  <div class="lesson-hero">
+    <div class="lesson-number">Урок 10</div>
+    <span class="lesson-emoji">🎮</span>
+    <h1 class="lesson-title">Scratch — первая игра!</h1>
+    <p class="lesson-subtitle">Создаём игру «Лови яблоки» — управляй корзинкой!</p>
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+  </div>
+
+  <!-- ПЛАН -->
+  <div class="card">
+    <div class="card-title">📋 План урока <small style="font-size:0.8rem; color:#9ca3af">(20 минут)</small></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-time">0–3 мин</span>
+        <div class="timeline-text">🎬 Смотрим анимации с прошлого урока</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">3–5 мин</span>
+        <div class="timeline-text">🎮 Разбираем игру «Лови яблоки»</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">5–17 мин</span>
+        <div class="timeline-text">💻 Создаём игру: корзинка, яблоко, счёт</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-time">17–20 мин</span>
+        <div class="timeline-text">🏆 Играем и улучшаем игру!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ОПИСАНИЕ ИГРЫ -->
+  <div class="card">
+    <div class="card-title">🎮 Игра «Лови яблоки»</div>
+    <div class="block block-purple">
+      <div class="block-title">📋 Правила игры</div>
+      <p>🍎 Яблоки падают сверху вниз случайным образом<br>
+      🧺 Корзинка движется стрелками ← →<br>
+      ✅ Поймал яблоко — получаешь очко!<br>
+      ❌ Яблоко упало — минус жизнь!<br>
+      🏆 Цель: поймать 10 яблок!</p>
+    </div>
+  </div>
+
+  <!-- КОД ДЛЯ ЯБЛОКА -->
+  <div class="card">
+    <div class="card-title">🍎 Код для яблока</div>
+    <div style="background:#f8fafc; border-radius:16px; padding:20px">
+      <div style="display:inline-flex; flex-direction:column; gap:2px">
+        <div style="background:#dc2626; border-radius:10px 10px 0 0; padding:8px 16px; color:white; font-weight:900; font-size:0.9rem">🚩 Когда зелёный флаг нажат</div>
+        <div style="background:#dc2626; padding:8px 16px; color:white; font-weight:900; font-size:0.9rem">🔁 Всегда (бесконечно)</div>
+        <div style="background:#1d4ed8; padding:8px 26px; color:white; font-weight:900; font-size:0.9rem">📍 Перейти в x: случайное(-200,200) y: 180</div>
+        <div style="background:#dc2626; padding:8px 26px; color:white; font-weight:900; font-size:0.9rem">🔁 Повторять пока y > -170</div>
+        <div style="background:#2563eb; padding:8px 36px; color:white; font-weight:900; font-size:0.9rem">⬇️ Изменить y на -5</div>
+        <div style="background:#0891b2; padding:8px 36px; color:white; font-weight:900; font-size:0.9rem">⏸️ Ждать 0.05 секунды</div>
+        <div style="background:#dc2626; border-radius:0 0 10px 10px; padding:8px 16px; color:white; font-weight:900; font-size:0.9rem">🔚 Конец повторений</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- КОД ДЛЯ КОРЗИНКИ -->
+  <div class="card">
+    <div class="card-title">🧺 Код для корзинки</div>
+    <div style="background:#f8fafc; border-radius:16px; padding:20px">
+      <div style="display:inline-flex; flex-direction:column; gap:2px">
+        <div style="background:#dc2626; border-radius:10px 10px 0 0; padding:8px 16px; color:white; font-weight:900; font-size:0.9rem">🚩 Когда зелёный флаг нажат</div>
+        <div style="background:#dc2626; padding:8px 16px; color:white; font-weight:900; font-size:0.9rem">🔁 Всегда</div>
+        <div style="background:#dc2626; padding:8px 26px; color:white; font-weight:900; font-size:0.9rem">❓ Если нажата ← стрелка</div>
+        <div style="background:#2563eb; padding:8px 36px; color:white; font-weight:900; font-size:0.9rem">⬅️ Изменить x на -10</div>
+        <div style="background:#dc2626; padding:8px 26px; color:white; font-weight:900; font-size:0.9rem">❓ Если нажата → стрелка</div>
+        <div style="background:#2563eb; padding:8px 36px; color:white; font-weight:900; font-size:0.9rem">➡️ Изменить x на 10</div>
+        <div style="background:#dc2626; border-radius:0 0 10px 10px; padding:8px 16px; color:white; font-weight:900; font-size:0.9rem">🔚 Конец</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПОНЯТИЯ -->
+  <div class="card">
+    <div class="card-title">🧠 Новые понятия</div>
+    <div class="block block-purple">
+      <div class="block-title">🔁 Цикл «Всегда»</div>
+      <p>Код внутри выполняется снова и снова — пока работает программа. Так корзинка постоянно проверяет клавиши!</p>
+    </div>
+    <div class="block block-blue">
+      <div class="block-title">❓ Условие «Если»</div>
+      <p>«Если нажата стрелка → двигайся». Компьютер проверяет условие и решает что делать. Это называется <strong>ветвление</strong>!</p>
+    </div>
+    <div class="block block-green">
+      <div class="block-title">🎲 Случайное число</div>
+      <p>«Случайное(-200, 200)» — компьютер сам выбирает число! Поэтому яблоки падают в разных местах.</p>
+    </div>
+  </div>
+
+  <!-- ИНТЕРЕСНЫЙ ФАКТ -->
+  <div class="fun-fact">
+    <div class="fun-fact-title">🌟 Интересный факт!</div>
+    <p>Первая компьютерная игра была создана в <strong>1958 году</strong> — это был «Теннис для двоих» на осциллоскопе! А первая игра типа «поймай предмет» появилась в <strong>1978 году</strong> — Atari «Канистры» (Cans). Ты только что создал игру в стиле классики! 🕹️</p>
+  </div>
+
+  <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+  <div class="homework">
+    <div class="homework-title">🎨 Домашнее задание</div>
+    <p>Улучши свою игру «Лови яблоки»:<br><br>
+    ⬆️ <strong>Уровень 1</strong>: Добавь счётчик очков<br>
+    ⬆️ <strong>Уровень 2</strong>: Сделай яблоки разного цвета<br>
+    ⬆️ <strong>Уровень 3</strong>: Добавь звук когда ловишь яблоко<br><br>
+    И нарисуй: <strong>дизайн своей мечты-игры</strong> — придумай идею, нарисуй персонажей и уровни! 🖍️</p>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <a href="../index.html" class="btn btn-home">🏠 Главная</a>
+  <a href="lesson-09.html" class="btn btn-prev">← Урок 9</a>
+  <a href="lesson-11.html" class="btn btn-next">Урок 11 →</a>
+</nav>
+
+</body>
+</html>
